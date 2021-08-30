@@ -234,7 +234,7 @@ function spawnEnemies() {
         speedUp += 0.02;
 
         enemies.push(new Enemy(x, y, radius, color, velocity ))
-    },  200)
+    },  400)
 }
 
 let animationId
@@ -330,7 +330,7 @@ function animate() {
     });
 };
 
-addEventListener('click', (event) => {
+addEventListener('mousemove', (event) => {
     // atan2는 각도를 생성할 때 불러오는 함수 근데 재밌는 점은 y, x 순서임
     const angle = Math.atan2(
         event.clientY - canvas.height / 2,
