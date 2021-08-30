@@ -231,10 +231,10 @@ function spawnEnemies() {
             x: Math.cos(angle) * speedUp,
             y: Math.sin(angle) * speedUp
         }
-        speedUp += 0.02;
+        speedUp += 0.08;
 
         enemies.push(new Enemy(x, y, radius, color, velocity ))
-    },  400)
+    },  200)
 }
 
 let animationId
@@ -337,8 +337,8 @@ addEventListener('mousemove', (event) => {
         event.clientX - canvas.width / 2
     ) 
     const velocity = {
-        x: Math.cos(angle) * 8,
-        y: Math.sin(angle) * 8
+        x: Math.cos(angle) * 11,
+        y: Math.sin(angle) * 11
     }
 
     // 처음 두 x, y 좌표는 플레이어의 위치값과 동일 시 시킴. 그래야지 총알이 같은 방향에서 나감
