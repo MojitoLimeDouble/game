@@ -1,0 +1,41 @@
+<!-- 테일윈드 css 사용하기 -->
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        background-color: black;
+    }
+    audio {
+        display: none;
+    }
+</style>
+<title>한눈 팔지마!</title>
+
+<div class="fixed text-white text-sm ml-2 mt-1 select-none"><span>점수: </span><span id="scoreEl">0</span></div>
+
+
+<div class="fixed inset-0 flex items-center justify-center" id="modalEl">
+    <div class="bg-white max-w-md w-full p-6 text-center">
+        <h1 class="text-4xl font-bold leading-none" id="bigScoreEl">0</h1>
+        <p class="text-sm text-gray-700 mb-4">점수</p>
+        <div>
+            <button class="bg-yellow-500 text-white w-full py-3 rounded-full text-sm" id="startGameBtn">시작</button>
+        </div>
+    </div>
+</div>
+<audio id="music_player" autoplay loop>
+    <source src="./static/game_bgm.mp3" type="audio/mp3">
+</audio>
+
+<div>
+    <button class="fixed mt-6 ml-2 select-none" onclick="document.getElementById('music_player').play()" style="color: aliceblue;">BGM</button>
+</div>
+
+<canvas id="screen"></canvas>
+
+
+<!-- 애니메이션 효과를 위해 gsap 사용 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+<script src="./index.js"></script>
